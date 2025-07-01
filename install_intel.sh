@@ -27,3 +27,22 @@ echo "Done"
 echo "All Archives"
 sudo pacman -Syu zip unzip p7zip unrar zstd xz lz4 lrzip lzop gzip bzip2 tar cpio arj cabextract atool xarchiver cpio cmake meson git gcc
 echo "Done"
+
+
+cd Downloads
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+yay -S hyprland-git hyprpaper-git waybar-hyprland-git
+
+
+sudo pacman -S wayland wayland-protocols wlroots libinput pamixer xdg-desktop-portal-wlr
+
+sudo pacman -S foot
+
+
+#in bash:
+if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
+  exec Hyprland
+fi
