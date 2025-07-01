@@ -19,3 +19,11 @@ echo "Done"
 echo "Fonts 3"
 sudo pacman -S ttf-fira-code ttf-jetbrains-mono ttf-cascadia-code
 echo "Done"
+
+echo "Automount"
+sudo pacman -S udisks2 udiskie gvfs gvfs-mtp
+echo "Done"
+
+echo "All Archives"
+sudo pacman -Syu zip unzip p7zip unrar zstd xz lz4 lrzip lzop gzip bzip2 tar cpio arj cabextract atool xarchiver cpio cmake meson git gcc
+echo "Done"
